@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jednoducha kalkulačka v JavaScript s parametrami</title>
+   
+</head>
+<body>
+
+    <!-- Jednoducha kalkulačka v Javascript s parametrami-->
+
+
+    <h1>Jednoduchá kalkulačka v JavaScript s parametrami</h1>
+
+    <form name="Jednoduchá kalkulačka">
+        <p>A = 4</p> <br> 
+        <p>B = 2</p> <br>
+        <p>Vykonávam matematické operácie</p> <br>
+        <p>(+ - * /)</p><br>
+        <input type="text" name="Operator" size="1" id="operator">  
+        <input type="button" value="Zadaj operator" onClick="Vypocet()"> 
+        </form>
+
+    <script>
+        const A = 4;
+        const B = 2;
+
+        function Vypocet() {
+            
+        var MathOp=document.getElementById("operator").value;
+        document.write(A +" "+MathOp+" "+ B +" "+ "=" + " ");
+        var WhatToEvaluate = A+MathOp+B; 
+        document.write(eval(WhatToEvaluate))
+
+        }  
+    </script>
+
+     <!-- Jednoducha kalkulačka v Javascript bez parametrov-->
+
+
+    <form name="Jednoduchá kalkulačka">
+        <h1>Jednoduch kalkulačka v Javascript bez parametrov</h1>
+        <p>Zadaj prvé číslo, potom operáciu a druhé číslo</p>
+              
+        <input type="text" name="Cislo01" size="6" id="cislo01"> 	
+        <input type="text" name="Operator0" size="1" id="operator0"> 
+        <input type="text" name="Cislo02" size="6" id="cislo02"> 	
+        <input type="button" value="Spočítaj" onClick="Vypocett()"> 	
+        </form>
+              
+        <script>
+        function Vypocett() // funkcia, ktorá sa volá na operáciu
+        {
+        var Number01=document.getElementById("cislo01").value; 
+        var Number02=document.getElementById("cislo02").value; 
+        var MathOp2=document.getElementById("operator0").value; 
+        document.write("Zadané boli čísla: ");
+        
+        document.write(Number01+" "+MathOp2+" "+Number02+"<br>");
+        var WhatToEvaluatee = Number01+MathOp2+Number02; 
+        document.write("Výsledok je: ");
+        document.write(eval(WhatToEvaluatee)); 
+        }
+        </script>
+
+
+
+</body>
+</html>
