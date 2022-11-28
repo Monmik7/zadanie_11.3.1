@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jednoducha kalkulačka v JavaScript bez parametrov</title>
+   
+</head>
+<body>
+    <!-- Jednoducha kalkulačka v Javascript bez parametrov-->
+    <form name="Jednoduchá kalkulačka">
+    <p>Zadaj prvé číslo, potom operáciu a druhé číslo</p>
+          
+    <input type="text" name="Cislo1" size="6" id="cislo1"> 	<!--vstupný riadok pre prvé číslo -->
+    <input type="text" name="Operator" size="1" id="operator">  <!--vstupný riadok pre matematickú operaciu: +, -, *, /-->
+    <input type="text" name="Cislo2" size="6" id="cislo2"> 	<!--vstupný riadok pre druhé číslo -->
+    <input type="button" value="Spočítaj" onClick="Vypocet()"> 	<!--tlačítko na výpočet, zavolá funkciu Vypocet()-->
+    </form>
+          
+    <script>
+    function Vypocet() // funkcia, ktorá sa volá na operáciu
+    {
+    var Number1=document.getElementById("cislo1").value; //do Number1 priradí hodnotu formulára do poľa cislo1
+    var Number2=document.getElementById("cislo2").value; //do Number2 přiradí hodnotu formulára do poľa cislo2
+    var MathOp=document.getElementById("operator").value;//do MathOp priradí hodnotu formulára do poľa operator
+    document.write("Zadané boli čísla: ");
+    
+    document.write(Number1+" "+MathOp+" "+Number2+"<br>");
+    var WhatToEvaluate = Number1+MathOp+Number2; //WhatToEvaluate - spojíme tri reťazce: Number1+MathOp+Number2
+    document.write("Výsledok je: ");
+    document.write(eval(WhatToEvaluate)); //volanie eval - vracia sa výsledok matematickej operácie s čísly
+    }
+    </script>
+    
+</body>
+</html>
